@@ -21,6 +21,7 @@ http.createServer(function(request, response) {
             response.write('Connection established to' + url +"\n");
             var collection=db.collection('users');
             var results=collection.find({name:'modulus user'});
+            var results1=collection.find({age:{$lte:30}});
             results.each(function (err, result) {
                 //if the result is null, there are no more results, it’s ok to close everything
                 if (result == null) {
@@ -33,7 +34,7 @@ http.createServer(function(request, response) {
                     response.write('Fetched: ' + result.name + " : " + result.age + " : " + result.roles.toString() +'\n');
                 }
             });
-            var results1=collection.find({age:{$lte:30}});
+
             results1.each(function (err, result) {
                 //if the result is null, there are no more results, it’s ok to close everything
                 if (result == null) {
