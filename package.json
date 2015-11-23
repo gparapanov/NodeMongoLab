@@ -1,0 +1,7 @@
+{
+  "name":"ndoeApp",
+  "version":"1.0.0",
+  "dependencies":{
+    "mongodb":"*"
+  }
+}
