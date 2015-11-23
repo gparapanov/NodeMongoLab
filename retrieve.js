@@ -24,10 +24,10 @@ http.createServer(function(request, response) {
             var results1=collection.find({age:{$lte:30}});
             results.each(function (err, result) {
                 //if the result is null, there are no more results, it’s ok to close everything
-                if (result == null) {
-                    response.end('Completed');
-                    db.close();
-                }
+               // if (result == null) {
+                //    response.end('Completed');
+               //     db.close();
+               // }
                 if (err) {
                     response.write(err);
                 } else {
