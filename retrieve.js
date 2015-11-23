@@ -37,7 +37,7 @@ http.createServer(function(request, response) {
             // do some work here with the database.
 
             //Done Close connection
-
+            db.close();
         }
         response.end('Finished, Connection closed \n');
     });
