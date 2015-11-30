@@ -1,7 +1,8 @@
 {
-  "name":"ndoeApp",
+  "name":"nodeApp",
   "version":"1.0.0",
   "dependencies":{
-    "mongodb":"*"
+    "mongodb":"*",
+    "twitter":"*"
   }
 }
